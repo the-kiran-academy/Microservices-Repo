@@ -1,7 +1,5 @@
 package com.jbk.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jbk.exception.ResourceAlreadyExistsException;
-import com.jbk.exception.ResourceNotExistsException;
 import com.jbk.model.ProductModel;
 import com.jbk.model.Product_Supplier_Category;
 import com.jbk.service.ProductService;
