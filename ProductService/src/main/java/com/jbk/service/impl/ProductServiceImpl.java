@@ -14,26 +14,19 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.jbk.dao.ProductDao;
-import com.jbk.dao.impl.ProductDaoImpl;
 import com.jbk.entity.ProductEntity;
-import com.jbk.exception.ResourceAlreadyExistsException;
 import com.jbk.exception.ResourceNotExistsException;
 import com.jbk.exception.SomethingWentWrongException;
 import com.jbk.model.CategoryModel;
@@ -376,7 +369,7 @@ public class ProductServiceImpl implements ProductService {
 
 			try {
 				SupplierModel supplierModel = restTemplate.getForObject(
-						"http://localhost:8092/supplier/get-supplier-by-id/" + productModel.getSupplierId(),
+						"http://SUPPLIER-SERVICE/supplier/get-supplier-by-id/" + productModel.getSupplierId(),
 						SupplierModel.class);
 
 				psc.setSupplierModel(supplierModel);
@@ -387,7 +380,7 @@ public class ProductServiceImpl implements ProductService {
 
 			try {
 				CategoryModel categoryModel = restTemplate.getForObject(
-						"http://localhost:8093/category/get-category-by-id/" + productModel.getCategoryId(),
+						"http://CATEGORY-SERVICE/category/get-category-by-id/" + productModel.getCategoryId(),
 						CategoryModel.class);
 				if (categoryModel.getCategoryId() <= 0) {
 					psc.setCategoryModel(null);

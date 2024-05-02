@@ -52,7 +52,7 @@ public class ObjectValidator {
 				
 				try {
 					SupplierModel supplierModel = restTemplate.getForObject(
-							"http://localhost:8092/supplier/get-supplier-by-id/" + productModel.getSupplierId(),
+							"http://SUPPLIER-SERVICE/supplier/get-supplier-by-id/" + productModel.getSupplierId(),
 							SupplierModel.class);
 					if(supplierModel==null || supplierModel.getSupplierId()<=0) {
 						validationMap.put("Supplier", "Invalid Supplier Id");
@@ -77,7 +77,7 @@ public class ObjectValidator {
 			//categoryService.getCategoryById(categoryId);
 				try {
 					CategoryModel categoryModel = restTemplate.getForObject(
-							"http://localhost:8093/category/get-category-by-id/" + productModel.getCategoryId(),
+							"http://CATEGORY-SERVICE/category/get-category-by-id/" + productModel.getCategoryId(),
 							CategoryModel.class);
 					if (categoryModel==null || categoryModel.getCategoryId() <= 0) {
 						validationMap.put("Category", "Invalid Category Id");

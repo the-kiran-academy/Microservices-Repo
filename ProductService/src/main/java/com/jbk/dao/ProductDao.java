@@ -3,7 +3,6 @@ package com.jbk.dao;
 import java.util.List;
 
 import com.jbk.entity.ProductEntity;
-import com.jbk.model.ProductModel;
 
 public interface ProductDao {
 	

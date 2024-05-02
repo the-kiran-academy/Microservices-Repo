@@ -14,7 +14,6 @@ import org.springframework.stereotype.Repository;
 import com.jbk.dao.CategoryDao;
 import com.jbk.entity.CategoryEntity;
 import com.jbk.exception.ResourceAlreadyExistsException;
-import com.jbk.exception.ResourceNotExistsException;
 import com.jbk.exception.SomethingWentWrongException;
 
 @Repository

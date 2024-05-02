@@ -1,10 +1,7 @@
 package com.jbk.dao.impl;
 
-import java.io.FileInputStream;
-
 import javax.persistence.RollbackException;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -14,7 +11,6 @@ import org.springframework.stereotype.Repository;
 import com.jbk.dao.SupplierDao;
 import com.jbk.entity.SupplierEntity;
 import com.jbk.exception.ResourceAlreadyExistsException;
-import com.jbk.exception.ResourceNotExistsException;
 import com.jbk.exception.SomethingWentWrongException;
 
 @Repository

@@ -10,9 +10,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.TransientPropertyValueException;
-import org.hibernate.criterion.AggregateProjection;
-import org.hibernate.criterion.Expression;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projection;
 import org.hibernate.criterion.Projections;
@@ -21,13 +18,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.jbk.dao.ProductDao;
 import com.jbk.entity.ProductEntity;
-import com.jbk.entity.ProductEntity;
-import com.jbk.entity.ProductEntity;
-import com.jbk.entity.ProductEntity;
 import com.jbk.exception.ResourceAlreadyExistsException;
 import com.jbk.exception.ResourceNotExistsException;
 import com.jbk.exception.SomethingWentWrongException;
-import com.jbk.model.ProductModel;
 
 //@Component
 @Repository
